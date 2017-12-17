@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  before_action :prevent_unauthorized_user_access, except: [:show, :index]
+  before_action :prevent_unauthorized_user_access, except: %i[show index newest]
 
   def index
     @links = Link.hottest
